@@ -9,8 +9,7 @@ public class Assignment2 {
 
     try {
       String url = "jdbc:mysql://localhost:3306/sqlandjava" +
-              "?useUnicode=true&useJDBCCompliantTimezoneShift=true" +
-              "&useLegacyDatetimeCode=false&serverTimezone=UTC";
+                   "?serverTimezone=UTC";
       String username = "user";
       String password = "password";
 
@@ -31,8 +30,8 @@ public class Assignment2 {
 
     while (resultSet.next()) {
       System.out.println(resultSet.getString("car_id") + ": " +
-              resultSet.getString("brand") + " " +
-              resultSet.getString("color"));
+                         resultSet.getString("brand") + " " +
+                         resultSet.getString("color"));
     }
   }
 
