@@ -13,7 +13,7 @@ public class Assignment2 {
       String username = "user";
       String password = "password";
 
-      Connection conn = DriverManager.getConnection(url,username,password);
+      Connection conn = DriverManager.getConnection(url, username, password);
       System.out.println("Connected to database!");
       return conn;
 
@@ -26,6 +26,7 @@ public class Assignment2 {
   public static void main(String[] args) throws Exception {
     Connection conn = getConnection();
     Statement statement = conn.createStatement();
+    
     ResultSet resultSet = statement.executeQuery("SELECT * FROM cars");
 
     while (resultSet.next()) {
